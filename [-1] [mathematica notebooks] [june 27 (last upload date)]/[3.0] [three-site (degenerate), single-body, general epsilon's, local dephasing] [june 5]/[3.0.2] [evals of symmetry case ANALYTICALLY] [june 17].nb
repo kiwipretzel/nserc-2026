@@ -1,0 +1,3069 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    129773,       3061]
+NotebookOptionsPosition[    126958,       3010]
+NotebookOutlinePosition[    127354,       3026]
+CellTagsIndexPosition[    127311,       3023]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"M", " ", "=", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{"I", "*", "J"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "J"}], ",", "0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", "0", ",", "0"}], "}"}],
+       ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"I", "*", "J"}], ",", 
+        RowBox[{"-", "\[CapitalGamma]"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "J"}], ",", "0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", 
+        RowBox[{"-", "\[CapitalGamma]"}], ",", "0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "J"}], ",", "0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "J"}], ",", "0", ",", "0", ",", 
+        RowBox[{"-", "\[CapitalGamma]"}], ",", 
+        RowBox[{"I", "*", "J"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", "0", ",", "0"}], "}"}],
+       ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "J"}], ",", "0", ",", 
+        RowBox[{"I", "*", "J"}], ",", "0", ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", "0"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "J"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", 
+        RowBox[{"-", "\[CapitalGamma]"}], ",", "0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", "0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", "0", ",", "0", ",", 
+        RowBox[{"-", "\[CapitalGamma]"}], ",", 
+        RowBox[{"I", "*", "J"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", "0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", "0", ",", 
+        RowBox[{"I", "*", "J"}], ",", 
+        RowBox[{"-", "\[CapitalGamma]"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", "0", ",", "0", ",", 
+        RowBox[{
+         RowBox[{"-", "I"}], "*", "\[Epsilon]"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", 
+        RowBox[{"I", "*", "\[Epsilon]"}], ",", "0"}], "}"}]}], "}"}]}], ";"}],
+   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"M", " ", "//", "TableForm"}]}], "Input",
+ CellChangeTimes->{{3.9896702030744143`*^9, 3.989670210720018*^9}, {
+  3.990128614861004*^9, 3.99012862846637*^9}, {3.990128800509956*^9, 
+  3.990128808570038*^9}, {3.990129001345662*^9, 3.990129045623582*^9}, {
+  3.9901302567758017`*^9, 3.990130267580534*^9}, {3.990130336441251*^9, 
+  3.990130345216401*^9}, {3.99013061214718*^9, 3.990130621405431*^9}, {
+  3.9901307841607103`*^9, 3.9901307895248833`*^9}, {3.990131691356535*^9, 
+  3.990131698168985*^9}, {3.9904398927100773`*^9, 3.99043990029455*^9}, {
+  3.990706461281485*^9, 3.99070648147009*^9}},
+ CellLabel->"In[54]:=",ExpressionUUID->"8e893c02-d800-4f22-9311-52b2b4fd4479"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0", 
+     RowBox[{"\[ImaginaryI]", " ", "J"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "J"}], "0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], "0", "0"},
+    {
+     RowBox[{"\[ImaginaryI]", " ", "J"}], 
+     RowBox[{"-", "\[CapitalGamma]"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "J"}], "0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], "0"},
+    {
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], 
+     RowBox[{"-", "\[CapitalGamma]"}], "0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "J"}], "0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}]},
+    {
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "J"}], "0", "0", 
+     RowBox[{"-", "\[CapitalGamma]"}], 
+     RowBox[{"\[ImaginaryI]", " ", "J"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], "0", "0"},
+    {"0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "J"}], "0", 
+     RowBox[{"\[ImaginaryI]", " ", "J"}], "0", 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], "0"},
+    {"0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "J"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], 
+     RowBox[{"-", "\[CapitalGamma]"}], "0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}]},
+    {
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], "0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], "0", "0", 
+     RowBox[{"-", "\[CapitalGamma]"}], 
+     RowBox[{"\[ImaginaryI]", " ", "J"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}]},
+    {"0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], "0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], "0", 
+     RowBox[{"\[ImaginaryI]", " ", "J"}], 
+     RowBox[{"-", "\[CapitalGamma]"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}]},
+    {"0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], "0", "0", 
+     RowBox[{
+      RowBox[{"-", "\[ImaginaryI]"}], " ", "\[Epsilon]"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], 
+     RowBox[{"\[ImaginaryI]", " ", "\[Epsilon]"}], "0"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.989670213659771*^9, 3.9901286501174307`*^9, 
+  3.990128812045018*^9, 3.990129047342341*^9, 3.990130268935231*^9, 
+  3.990130346790085*^9, 3.9901306222591763`*^9, 3.9901307912191687`*^9, 
+  3.990131702591284*^9, 3.9904399075023203`*^9, 3.990439996655891*^9, 
+  3.990440373238735*^9, 3.990706483298046*^9, 3.990708082579921*^9},
+ CellLabel->
+  "Out[55]//TableForm=",ExpressionUUID->"2f671fbf-fc0b-48e0-8aee-\
+188e52488eaf"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"evals", ",", " ", "evecs"}], "}"}], " ", "=", " ", 
+   RowBox[{"Eigensystem", "[", "M", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.989670217990835*^9, 3.98967022663032*^9}, 
+   3.99043992650991*^9, {3.9907065509182243`*^9, 3.990706561814621*^9}},
+ CellLabel->"In[56]:=",ExpressionUUID->"d727bf08-a991-4deb-9e1a-db16dffc2f63"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"evalsSeries", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Normal", "[", 
+       RowBox[{"Series", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{"\[Epsilon]", ",", "0", ",", "2"}], "}"}]}], "]"}], "]"}], 
+      "&"}], "/@", "evals"}]}], ";"}], " ", "\[IndentingNewLine]", "\n", 
+  RowBox[{"(*", 
+   RowBox[{"simplify", " ", "results"}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"evalsSeriesSimplified", "=", 
+    RowBox[{"FullSimplify", "[", "evalsSeries", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"evalsSeriesSimplified", " ", "//", "TableForm"}]}], "Input",
+ CellChangeTimes->{{3.9896702812951107`*^9, 3.989670289727862*^9}, {
+  3.9896703464921007`*^9, 3.989670349572237*^9}, {3.990129237436204*^9, 
+  3.990129353151144*^9}, {3.990129385088297*^9, 3.9901293861108303`*^9}, {
+  3.9901295545889273`*^9, 3.9901295616063547`*^9}, {3.990129850792425*^9, 
+  3.990129877307259*^9}, {3.9901299655759783`*^9, 3.990129965785427*^9}, {
+  3.990130115833721*^9, 3.990130116084551*^9}, {3.990439935533621*^9, 
+  3.990439941599819*^9}, {3.990440258051798*^9, 3.990440258409745*^9}, {
+  3.990440358523162*^9, 3.990440366169552*^9}, {3.990706509470532*^9, 
+  3.990706537165534*^9}},
+ CellLabel->"In[45]:=",ExpressionUUID->"071c87d0-a5a1-47f9-95a3-faa82856ee03"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Root", "sbr", 
+   "\"Because of branch cuts, the series may represent a different root of \
+\\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \
+\\\"\[CapitalGamma]\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\\\", \
+\\\"2\\\"]}], \\\"+\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\
+\"J\\\", \\\"2\\\"], \\\"+\\\", SuperscriptBox[\\\"\[CapitalGamma]\\\", \\\"2\
+\\\"], \\\"+\\\", RowBox[{\\\"8\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\
+\\\", \\\"2\\\"]}]}], \\\")\\\"}], \\\" \\\", \\\"#1\\\"}], \\\"+\\\", \
+RowBox[{\\\"2\\\", \\\" \\\", \\\"\[CapitalGamma]\\\", \\\" \\\", \
+SuperscriptBox[\\\"#1\\\", \\\"2\\\"]}], \\\"+\\\", \
+SuperscriptBox[\\\"#1\\\", \\\"3\\\"]}], \\\"&\\\"}]\\) for some values of \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"J\\\", \\\",\\\", \\\"\[CapitalGamma]\
+\\\", \\\",\\\", \\\"\[Epsilon]\\\"}], \\\"}\\\"}]\\).\"", 2, 45, 37, 
+   20417865034937714428, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.990129859757308*^9, 3.990129892648905*^9, 3.990129966363578*^9, 
+   3.990130117033883*^9, 3.990130282003232*^9, 3.990130355372308*^9, 
+   3.990130630238826*^9, 3.990130798684352*^9, 3.990131711310792*^9, 
+   3.990439943467341*^9, 3.9904402328500853`*^9, 3.99044026696117*^9, {
+   3.9904403673273697`*^9, 3.990440381384801*^9}, {3.9907065396288557`*^9, 
+   3.990706568954126*^9}},
+ CellLabel->
+  "During evaluation of \
+In[45]:=",ExpressionUUID->"e27ce9e6-be2b-48ef-a50e-b0cc689e6da4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Root", "sbr", 
+   "\"Because of branch cuts, the series may represent a different root of \
+\\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \
+\\\"\[CapitalGamma]\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\\\", \
+\\\"2\\\"]}], \\\"+\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\
+\"J\\\", \\\"2\\\"], \\\"+\\\", SuperscriptBox[\\\"\[CapitalGamma]\\\", \\\"2\
+\\\"], \\\"+\\\", RowBox[{\\\"8\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\
+\\\", \\\"2\\\"]}]}], \\\")\\\"}], \\\" \\\", \\\"#1\\\"}], \\\"+\\\", \
+RowBox[{\\\"2\\\", \\\" \\\", \\\"\[CapitalGamma]\\\", \\\" \\\", \
+SuperscriptBox[\\\"#1\\\", \\\"2\\\"]}], \\\"+\\\", \
+SuperscriptBox[\\\"#1\\\", \\\"3\\\"]}], \\\"&\\\"}]\\) for some values of \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"J\\\", \\\",\\\", \\\"\[CapitalGamma]\
+\\\", \\\",\\\", \\\"\[Epsilon]\\\"}], \\\"}\\\"}]\\).\"", 2, 45, 38, 
+   20417865034937714428, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.990129859757308*^9, 3.990129892648905*^9, 3.990129966363578*^9, 
+   3.990130117033883*^9, 3.990130282003232*^9, 3.990130355372308*^9, 
+   3.990130630238826*^9, 3.990130798684352*^9, 3.990131711310792*^9, 
+   3.990439943467341*^9, 3.9904402328500853`*^9, 3.99044026696117*^9, {
+   3.9904403673273697`*^9, 3.990440381384801*^9}, {3.9907065396288557`*^9, 
+   3.9907065690093327`*^9}},
+ CellLabel->
+  "During evaluation of \
+In[45]:=",ExpressionUUID->"69d11303-21c5-4a16-a19c-baa580192eca"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Root", "sbr", 
+   "\"Because of branch cuts, the series may represent a different root of \
+\\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \
+\\\"\[CapitalGamma]\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\\\", \
+\\\"2\\\"]}], \\\"+\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\
+\"J\\\", \\\"2\\\"], \\\"+\\\", SuperscriptBox[\\\"\[CapitalGamma]\\\", \\\"2\
+\\\"], \\\"+\\\", RowBox[{\\\"8\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\
+\\\", \\\"2\\\"]}]}], \\\")\\\"}], \\\" \\\", \\\"#1\\\"}], \\\"+\\\", \
+RowBox[{\\\"2\\\", \\\" \\\", \\\"\[CapitalGamma]\\\", \\\" \\\", \
+SuperscriptBox[\\\"#1\\\", \\\"2\\\"]}], \\\"+\\\", \
+SuperscriptBox[\\\"#1\\\", \\\"3\\\"]}], \\\"&\\\"}]\\) for some values of \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"J\\\", \\\",\\\", \\\"\[CapitalGamma]\
+\\\", \\\",\\\", \\\"\[Epsilon]\\\"}], \\\"}\\\"}]\\).\"", 2, 45, 39, 
+   20417865034937714428, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.990129859757308*^9, 3.990129892648905*^9, 3.990129966363578*^9, 
+   3.990130117033883*^9, 3.990130282003232*^9, 3.990130355372308*^9, 
+   3.990130630238826*^9, 3.990130798684352*^9, 3.990131711310792*^9, 
+   3.990439943467341*^9, 3.9904402328500853`*^9, 3.99044026696117*^9, {
+   3.9904403673273697`*^9, 3.990440381384801*^9}, {3.9907065396288557`*^9, 
+   3.990706569077815*^9}},
+ CellLabel->
+  "During evaluation of \
+In[45]:=",ExpressionUUID->"694fcf28-1321-4163-8805-6aea94b3bc77"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Root\\\", \\\"::\\\", \
+\\\"sbr\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 45, 40, 20417865034937714428, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.990129859757308*^9, 3.990129892648905*^9, 3.990129966363578*^9, 
+   3.990130117033883*^9, 3.990130282003232*^9, 3.990130355372308*^9, 
+   3.990130630238826*^9, 3.990130798684352*^9, 3.990131711310792*^9, 
+   3.990439943467341*^9, 3.9904402328500853`*^9, 3.99044026696117*^9, {
+   3.9904403673273697`*^9, 3.990440381384801*^9}, {3.9907065396288557`*^9, 
+   3.990706569183342*^9}},
+ CellLabel->
+  "During evaluation of \
+In[45]:=",ExpressionUUID->"5e41c18f-ac7f-4517-acd3-40631bc3863e"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {"0"},
+     {
+      RowBox[{"-", "\[CapitalGamma]"}]},
+     {
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"6", " ", "\[CapitalGamma]", " ", 
+         SuperscriptBox["\[Epsilon]", "2"]}], 
+        RowBox[{
+         SuperscriptBox["J", "2"], "+", 
+         SuperscriptBox["\[CapitalGamma]", "2"]}]]}]},
+     {
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"\[ImaginaryI]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"J", "-", 
+              RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], 
+            "2"], "+", 
+           FractionBox[
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"4", " ", "J"}], "-", 
+               RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], 
+             " ", 
+             SuperscriptBox["\[Epsilon]", "2"]}], "J"]}], ")"}]}], 
+        RowBox[{"J", "-", 
+         RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}]]}]},
+     {
+      FractionBox[
+       RowBox[{"\[ImaginaryI]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"(", 
+            RowBox[{"J", "+", 
+             RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], "2"],
+           "+", 
+          FractionBox[
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"4", " ", "J"}], "+", 
+              RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], " ", 
+            SuperscriptBox["\[Epsilon]", "2"]}], "J"]}], ")"}]}], 
+       RowBox[{"J", "+", 
+        RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}]]},
+     {
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "\[ImaginaryI]"}], " ", "J"}], "-", "\[CapitalGamma]", 
+       "+", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"6", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+           "\[CapitalGamma]"}], ")"}], " ", 
+         SuperscriptBox["\[Epsilon]", "2"]}], 
+        RowBox[{"J", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"3", " ", "J"}], "+", 
+           RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}]},
+     {
+      RowBox[{
+       RowBox[{"\[ImaginaryI]", " ", "J"}], "-", "\[CapitalGamma]", "+", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "6"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+           "\[CapitalGamma]"}], ")"}], " ", 
+         SuperscriptBox["\[Epsilon]", "2"]}], 
+        RowBox[{"J", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"3", " ", "J"}], "-", 
+           RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}]},
+     {
+      RowBox[{
+       FractionBox["1", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", "\[CapitalGamma]"}], "-", 
+         SqrtBox[
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "16"}], " ", 
+            SuperscriptBox["J", "2"]}], "+", 
+           SuperscriptBox["\[CapitalGamma]", "2"]}]], "+", 
+         FractionBox[
+          RowBox[{"4", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"24", " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             RowBox[{"\[CapitalGamma]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"-", "\[CapitalGamma]"}], "+", 
+                SqrtBox[
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "16"}], " ", 
+                   SuperscriptBox["J", "2"]}], "+", 
+                  SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}]}], 
+            ")"}], " ", 
+           SuperscriptBox["\[Epsilon]", "2"]}], 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"\[CapitalGamma]", "-", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["J", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "8"}], " ", "\[CapitalGamma]"}], "+", 
+              RowBox[{"3", " ", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "16"}], " ", 
+                  SuperscriptBox["J", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}]]}], 
+        ")"}]}]},
+     {
+      FractionBox[
+       RowBox[{
+        RowBox[{"48", " ", 
+         SuperscriptBox["J", "4"]}], "-", 
+        RowBox[{"2", " ", "\[CapitalGamma]", " ", 
+         RowBox[{"(", 
+          RowBox[{"\[CapitalGamma]", "+", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}], " ", 
+         SuperscriptBox["\[Epsilon]", "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["J", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "3"}], " ", 
+            SuperscriptBox["\[CapitalGamma]", "2"]}], "-", 
+           RowBox[{"5", " ", "\[CapitalGamma]", " ", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], "+", 
+           RowBox[{"48", " ", 
+            SuperscriptBox["\[Epsilon]", "2"]}]}], ")"}]}]}], 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{"\[CapitalGamma]", "+", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "-", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["J", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"8", " ", "\[CapitalGamma]"}], "+", 
+           RowBox[{"3", " ", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}]]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.990129892148254*^9, 3.990129926845674*^9, 3.9901299984904747`*^9, 
+   3.990130149544993*^9, 3.9901302834513693`*^9, 3.990130384777048*^9, 
+   3.990130631581974*^9, 3.99013084615086*^9, 3.9901317415897217`*^9, 
+   3.990439944078857*^9, 3.990440233277567*^9, 3.99044026738704*^9, {
+   3.990440367380583*^9, 3.990440381482245*^9}, {3.990706545215705*^9, 
+   3.990706570306727*^9}},
+ CellLabel->
+  "Out[47]//TableForm=",ExpressionUUID->"de435c24-c276-4059-8d39-\
+cabe1b484bca"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.990129791289673*^9, 
+  3.990129791295786*^9}},ExpressionUUID->"e1a129b8-e533-4069-a9b3-\
+8d7cc7eff43b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"evalsSeriesSimplified", " ", "//", "InputForm"}]], "Input",
+ CellChangeTimes->{{3.9901304140652742`*^9, 3.990130420067233*^9}},
+ CellLabel->"In[48]:=",ExpressionUUID->"1b428c6a-c04e-4940-92e7-24a22d541fa5"],
+
+Cell["\<\
+{0, -\[CapitalGamma], (-6*\[CapitalGamma]*\[Epsilon]^2)/(J^2 + \
+\[CapitalGamma]^2), ((-I)*((J - I*\[CapitalGamma])^2 + ((4*J - I*\
+\[CapitalGamma])*\[Epsilon]^2)/J))/(J - I*\[CapitalGamma]), (I*((J + I*\
+\[CapitalGamma])^2 + ((4*J + I*\[CapitalGamma])*\[Epsilon]^2)/J))/(J + I*\
+\[CapitalGamma]), 
+ (-I)*J - \[CapitalGamma] + (((6*I)*J + \
+\[CapitalGamma])*\[Epsilon]^2)/(J*(3*J + I*\[CapitalGamma])), I*J - \
+\[CapitalGamma] + (((-6*I)*J + \[CapitalGamma])*\[Epsilon]^2)/(J*(3*J - I*\
+\[CapitalGamma])), 
+ (-\[CapitalGamma] - Sqrt[-16*J^2 + \[CapitalGamma]^2] + (4*(24*J^2 + \
+\[CapitalGamma]*(-\[CapitalGamma] + Sqrt[-16*J^2 + \[CapitalGamma]^2]))*\
+\[Epsilon]^2)/(\[CapitalGamma]^2*(\[CapitalGamma] - Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) + 2*J^2*(-8*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])))/2, 
+ (48*J^4 - 2*\[CapitalGamma]*(\[CapitalGamma] + Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])*\[Epsilon]^2 + J^2*(-3*\[CapitalGamma]^2 - 5*\
+\[CapitalGamma]*Sqrt[-16*J^2 + \[CapitalGamma]^2] + 48*\[Epsilon]^2))/
+  (\[CapitalGamma]^2*(\[CapitalGamma] + Sqrt[-16*J^2 + \[CapitalGamma]^2]) - \
+2*J^2*(8*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \[CapitalGamma]^2]))}\
+\>", "Output",
+ CellChangeTimes->{3.990130420384437*^9, 3.99013175915593*^9, 
+  3.990706579183238*^9},
+ CellLabel->
+  "Out[48]//InputForm=",ExpressionUUID->"5c7125d0-2b5b-4e82-9b37-\
+8d2d6ad1b974"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"N", "@", 
+     RowBox[{"(", 
+      RowBox[{"#", "/.", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"\[Epsilon]", "->", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", 
+            RowBox[{"-", "4"}], ")"}]}]}], ",", 
+         RowBox[{"\[Alpha]", "->", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", 
+            RowBox[{"-", "4"}], ")"}]}]}], ",", " ", 
+         RowBox[{"\[CapitalGamma]", "->", 
+          RowBox[{"10", "^", 
+           RowBox[{"(", 
+            RowBox[{"-", "6"}], ")"}]}]}], ",", " ", 
+         RowBox[{"J", "->", "0.1"}]}], "}"}]}], ")"}]}], " ", "&"}], "/@", 
+   " ", "evals"}], " ", "//", "TableForm"}]], "Input",
+ CellChangeTimes->{{3.990440082535981*^9, 3.9904402170066957`*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"a7c8e9b8-47a4-4a9f-b85f-a21a07b2bcaf"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[GridBox[{
+     {"0.`"},
+     {
+      RowBox[{"-", "1.`*^-6"}]},
+     {
+      RowBox[{"-", "5.999951999784012`*^-12"}]},
+     {
+      RowBox[{
+       RowBox[{"-", "9.999970000083542`*^-7"}], "-", 
+       RowBox[{"0.10000039999919998`", " ", "\[ImaginaryI]"}]}]},
+     {
+      RowBox[{
+       RowBox[{"-", "9.999970000083542`*^-7"}], "+", 
+       RowBox[{"0.10000039999919998`", " ", "\[ImaginaryI]"}]}]},
+     {
+      RowBox[{
+       RowBox[{"-", "9.999990000059999`*^-7"}], "-", 
+       RowBox[{"0.0999998000004`", " ", "\[ImaginaryI]"}]}]},
+     {
+      RowBox[{
+       RowBox[{"-", "9.999990000059999`*^-7"}], "+", 
+       RowBox[{"0.0999998000004`", " ", "\[ImaginaryI]"}]}]},
+     {
+      RowBox[{
+       RowBox[{"-", "5.000009999939998`*^-7"}], "-", 
+       RowBox[{"0.20000019999897503`", " ", "\[ImaginaryI]"}]}]},
+     {
+      RowBox[{
+       RowBox[{"-", "5.000009999939998`*^-7"}], "+", 
+       RowBox[{"0.20000019999897503`", " ", "\[ImaginaryI]"}]}]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.5599999999999999]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}],
+   Column],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.990440206157645*^9, 3.990440217491716*^9}, 
+   3.99070678656432*^9},
+ CellLabel->
+  "Out[49]//TableForm=",ExpressionUUID->"a0be18bc-4693-41b8-b438-\
+3ce7102e38bf"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"evecsSeries", "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Normal", "[", 
+       RowBox[{"Series", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"{", 
+          RowBox[{"\[Epsilon]", ",", "0", ",", "2"}], "}"}]}], "]"}], "]"}], 
+      "&"}], "/@", "evecs"}]}], ";"}], " ", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"simplify", " ", "results"}], "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"evecsSeriesSimplified", "=", 
+    RowBox[{"FullSimplify", "[", "evecsSeries", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"evecsSeriesSimplified", " ", "//", "TableForm"}]}], "Input",
+ CellChangeTimes->{{3.9907068075706882`*^9, 3.9907068244395647`*^9}},
+ CellLabel->"In[50]:=",ExpressionUUID->"eb4a0d64-6328-4465-9e6a-a14cd8e9c350"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Root", "sbr", 
+   "\"Because of branch cuts, the series may represent a different root of \
+\\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \
+\\\"\[CapitalGamma]\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\\\", \
+\\\"2\\\"]}], \\\"+\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\
+\"J\\\", \\\"2\\\"], \\\"+\\\", SuperscriptBox[\\\"\[CapitalGamma]\\\", \\\"2\
+\\\"], \\\"+\\\", RowBox[{\\\"8\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\
+\\\", \\\"2\\\"]}]}], \\\")\\\"}], \\\" \\\", \\\"#1\\\"}], \\\"+\\\", \
+RowBox[{\\\"2\\\", \\\" \\\", \\\"\[CapitalGamma]\\\", \\\" \\\", \
+SuperscriptBox[\\\"#1\\\", \\\"2\\\"]}], \\\"+\\\", \
+SuperscriptBox[\\\"#1\\\", \\\"3\\\"]}], \\\"&\\\"}]\\) for some values of \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"J\\\", \\\",\\\", \\\"\[CapitalGamma]\
+\\\", \\\",\\\", \\\"\[Epsilon]\\\"}], \\\"}\\\"}]\\).\"", 2, 50, 41, 
+   20417865034937714428, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.990706825119315*^9},
+ CellLabel->
+  "During evaluation of \
+In[50]:=",ExpressionUUID->"c7b28e45-5922-4709-939c-424736228c8b"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Root", "sbr", 
+   "\"Because of branch cuts, the series may represent a different root of \
+\\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \
+\\\"\[CapitalGamma]\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\\\", \
+\\\"2\\\"]}], \\\"+\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\
+\"J\\\", \\\"2\\\"], \\\"+\\\", SuperscriptBox[\\\"\[CapitalGamma]\\\", \\\"2\
+\\\"], \\\"+\\\", RowBox[{\\\"8\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\
+\\\", \\\"2\\\"]}]}], \\\")\\\"}], \\\" \\\", \\\"#1\\\"}], \\\"+\\\", \
+RowBox[{\\\"2\\\", \\\" \\\", \\\"\[CapitalGamma]\\\", \\\" \\\", \
+SuperscriptBox[\\\"#1\\\", \\\"2\\\"]}], \\\"+\\\", \
+SuperscriptBox[\\\"#1\\\", \\\"3\\\"]}], \\\"&\\\"}]\\) for some values of \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"J\\\", \\\",\\\", \\\"\[CapitalGamma]\
+\\\", \\\",\\\", \\\"\[Epsilon]\\\"}], \\\"}\\\"}]\\).\"", 2, 50, 42, 
+   20417865034937714428, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.990706825173122*^9},
+ CellLabel->
+  "During evaluation of \
+In[50]:=",ExpressionUUID->"d2a030b2-7bd0-4948-bd51-56c18a77582c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Root", "sbr", 
+   "\"Because of branch cuts, the series may represent a different root of \
+\\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \
+\\\"\[CapitalGamma]\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\\\", \
+\\\"2\\\"]}], \\\"+\\\", RowBox[{RowBox[{\\\"(\\\", RowBox[{SuperscriptBox[\\\
+\"J\\\", \\\"2\\\"], \\\"+\\\", SuperscriptBox[\\\"\[CapitalGamma]\\\", \\\"2\
+\\\"], \\\"+\\\", RowBox[{\\\"8\\\", \\\" \\\", SuperscriptBox[\\\"\[Epsilon]\
+\\\", \\\"2\\\"]}]}], \\\")\\\"}], \\\" \\\", \\\"#1\\\"}], \\\"+\\\", \
+RowBox[{\\\"2\\\", \\\" \\\", \\\"\[CapitalGamma]\\\", \\\" \\\", \
+SuperscriptBox[\\\"#1\\\", \\\"2\\\"]}], \\\"+\\\", \
+SuperscriptBox[\\\"#1\\\", \\\"3\\\"]}], \\\"&\\\"}]\\) for some values of \
+\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"J\\\", \\\",\\\", \\\"\[CapitalGamma]\
+\\\", \\\",\\\", \\\"\[Epsilon]\\\"}], \\\"}\\\"}]\\).\"", 2, 50, 43, 
+   20417865034937714428, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.990706825241362*^9},
+ CellLabel->
+  "During evaluation of \
+In[50]:=",ExpressionUUID->"ac8da127-2e67-4a58-9f95-f900b4326dd4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Root\\\", \\\"::\\\", \
+\\\"sbr\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 50, 44, 20417865034937714428, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.9907068253087177`*^9},
+ CellLabel->
+  "During evaluation of \
+In[50]:=",ExpressionUUID->"fcd7f3c3-d628-4e2e-847a-65cad5ecc63c"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"1", "0", "0", "0", "1", "0", "0", "0", "1"},
+    {"0", 
+     FractionBox["J", "\[Epsilon]"], "1", 
+     FractionBox["J", "\[Epsilon]"], "0", "1", "1", "1", "0"},
+    {
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], 
+     FractionBox[
+      RowBox[{"3", " ", 
+       SuperscriptBox["\[Epsilon]", "2"]}], 
+      RowBox[{
+       SuperscriptBox["J", "2"], "+", 
+       SuperscriptBox["\[CapitalGamma]", "2"]}]], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"3", " ", "\[Epsilon]"}], 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "-", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}], 
+     FractionBox[
+      RowBox[{"3", " ", 
+       SuperscriptBox["\[Epsilon]", "2"]}], 
+      RowBox[{
+       SuperscriptBox["J", "2"], "+", 
+       SuperscriptBox["\[CapitalGamma]", "2"]}]], 
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"3", " ", "\[Epsilon]"}], 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "-", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"3", " ", "\[Epsilon]"}], 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "+", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"3", " ", "\[Epsilon]"}], 
+       RowBox[{"2", " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "+", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}], 
+     "1"},
+    {
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["J", "2"]}], " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "-", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}], "+", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "4"}], " ", "\[ImaginaryI]", " ", "J"}], "-", 
+           "\[CapitalGamma]"}], ")"}], " ", "\[CapitalGamma]", " ", 
+         SuperscriptBox["\[Epsilon]", "2"]}], 
+        RowBox[{"J", "-", 
+         RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}]]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["J", "3"]}]], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"J", "-", 
+        RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], 
+       RowBox[{"2", " ", "\[Epsilon]"}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"4", " ", 
+           SuperscriptBox["J", "2"]}], "+", 
+          RowBox[{
+          "3", " ", "\[ImaginaryI]", " ", "J", " ", "\[CapitalGamma]"}], "+", 
+          
+          SuperscriptBox["\[CapitalGamma]", "2"]}], ")"}], " ", 
+        "\[Epsilon]"}], 
+       RowBox[{"4", " ", 
+        SuperscriptBox["J", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "-", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}], 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["J", "2"]}], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"J", "-", 
+           RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], "2"]}],
+        "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "4"}], " ", "\[ImaginaryI]", " ", "J"}], "-", 
+          "\[CapitalGamma]"}], ")"}], " ", "\[CapitalGamma]", " ", 
+        SuperscriptBox["\[Epsilon]", "2"]}]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["J", "3"], " ", 
+       RowBox[{"(", 
+        RowBox[{"J", "-", 
+         RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]], 
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"J", "-", 
+        RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], 
+       RowBox[{"2", " ", "\[Epsilon]"}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"4", " ", 
+           SuperscriptBox["J", "2"]}], "+", 
+          RowBox[{
+          "3", " ", "\[ImaginaryI]", " ", "J", " ", "\[CapitalGamma]"}], "+", 
+          
+          SuperscriptBox["\[CapitalGamma]", "2"]}], ")"}], " ", 
+        "\[Epsilon]"}], 
+       RowBox[{"4", " ", 
+        SuperscriptBox["J", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "-", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}], 
+     FractionBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "4"}], " ", "J"}], "+", 
+         RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], " ", 
+       "\[Epsilon]"}], 
+      RowBox[{"4", " ", 
+       SuperscriptBox["J", "2"]}]], 
+     FractionBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "4"}], " ", "J"}], "+", 
+         RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], " ", 
+       "\[Epsilon]"}], 
+      RowBox[{"4", " ", 
+       SuperscriptBox["J", "2"]}]], "1"},
+    {
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["J", "2"]}], " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "+", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}], "+", 
+       FractionBox[
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"4", " ", "\[ImaginaryI]", " ", "J"}], "-", 
+           "\[CapitalGamma]"}], ")"}], " ", "\[CapitalGamma]", " ", 
+         SuperscriptBox["\[Epsilon]", "2"]}], 
+        RowBox[{"J", "+", 
+         RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}]]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["J", "3"]}]], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"4", " ", "J"}], "+", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], " ", 
+        "\[Epsilon]"}], 
+       RowBox[{"4", " ", 
+        SuperscriptBox["J", "2"]}]]}], 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         SuperscriptBox["J", "2"]}], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{"J", "+", 
+           RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], "2"]}],
+        "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"4", " ", "\[ImaginaryI]", " ", "J"}], "-", 
+          "\[CapitalGamma]"}], ")"}], " ", "\[CapitalGamma]", " ", 
+        SuperscriptBox["\[Epsilon]", "2"]}]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["J", "3"], " ", 
+       RowBox[{"(", 
+        RowBox[{"J", "+", 
+         RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]], 
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"4", " ", "J"}], "+", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], " ", 
+        "\[Epsilon]"}], 
+       RowBox[{"4", " ", 
+        SuperscriptBox["J", "2"]}]]}], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"J", "+", 
+        RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], 
+       RowBox[{"2", " ", "\[Epsilon]"}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"4", " ", 
+           SuperscriptBox["J", "2"]}], "-", 
+          RowBox[{
+          "3", " ", "\[ImaginaryI]", " ", "J", " ", "\[CapitalGamma]"}], "+", 
+          
+          SuperscriptBox["\[CapitalGamma]", "2"]}], ")"}], " ", 
+        "\[Epsilon]"}], 
+       RowBox[{"4", " ", 
+        SuperscriptBox["J", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "+", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"J", "+", 
+        RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], 
+       RowBox[{"2", " ", "\[Epsilon]"}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"4", " ", 
+           SuperscriptBox["J", "2"]}], "-", 
+          RowBox[{
+          "3", " ", "\[ImaginaryI]", " ", "J", " ", "\[CapitalGamma]"}], "+", 
+          
+          SuperscriptBox["\[CapitalGamma]", "2"]}], ")"}], " ", 
+        "\[Epsilon]"}], 
+       RowBox[{"4", " ", 
+        SuperscriptBox["J", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{"J", "+", 
+          RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]]}], 
+     "1"},
+    {
+     FractionBox[
+      RowBox[{"3", " ", "\[Epsilon]"}], 
+      RowBox[{
+       RowBox[{"3", " ", "J"}], "+", 
+       RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}]], 
+     FractionBox[
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "3"}], " ", "J"}], "+", 
+         RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], " ", 
+       "\[Epsilon]"}], 
+      RowBox[{"J", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"3", " ", "J"}], "+", 
+         RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}]}]], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"\[CapitalGamma]", " ", 
+        SuperscriptBox["\[Epsilon]", "2"]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["J", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "3"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]"}], ")"}]}]]}], 
+     FractionBox[
+      RowBox[{
+       RowBox[{"3", " ", "J", " ", "\[Epsilon]"}], "-", 
+       RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]", " ", "\[Epsilon]"}]}], 
+      RowBox[{
+       RowBox[{"3", " ", 
+        SuperscriptBox["J", "2"]}], "+", 
+       RowBox[{"\[ImaginaryI]", " ", "J", " ", "\[CapitalGamma]"}]}]], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{"3", " ", "\[Epsilon]"}], 
+       RowBox[{
+        RowBox[{"3", " ", "J"}], "+", 
+        RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}]]}], 
+     FractionBox[
+      RowBox[{"\[CapitalGamma]", " ", 
+       SuperscriptBox["\[Epsilon]", "2"]}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["J", "2"], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "3"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+         "\[CapitalGamma]"}], ")"}]}]], 
+     RowBox[{"-", "1"}], "1", "0"},
+    {
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+          SuperscriptBox["J", "2"]}], "+", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"12", " ", "J"}], "+", 
+             RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], " ", 
+           
+           SuperscriptBox["\[Epsilon]", "2"]}], 
+          RowBox[{
+           RowBox[{"3", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+           "\[CapitalGamma]"}]]}], ")"}]}], 
+      RowBox[{"\[CapitalGamma]", " ", "\[Epsilon]"}]], 
+     RowBox[{"-", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"2", " ", 
+         SuperscriptBox["J", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"9", " ", 
+            SuperscriptBox["J", "2"]}], "+", 
+           SuperscriptBox["\[CapitalGamma]", "2"]}], ")"}]}], "+", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "36"}], " ", 
+            SuperscriptBox["J", "2"]}], "-", 
+           RowBox[{
+           "9", " ", "\[ImaginaryI]", " ", "J", " ", "\[CapitalGamma]"}], "+", 
+           SuperscriptBox["\[CapitalGamma]", "2"]}], ")"}], " ", 
+         SuperscriptBox["\[Epsilon]", "2"]}]}], 
+       RowBox[{"J", " ", "\[CapitalGamma]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"3", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]"}], ")"}], " ", "\[Epsilon]"}]]}], 
+     RowBox[{
+      RowBox[{"-", "2"}], "+", 
+      FractionBox[
+       RowBox[{"30", " ", "\[ImaginaryI]", " ", "J"}], 
+       RowBox[{
+        RowBox[{"3", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+        "\[CapitalGamma]"}]], "-", 
+      FractionBox[
+       RowBox[{"2", " ", 
+        SuperscriptBox["J", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"3", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]"}], ")"}]}], 
+       RowBox[{"\[CapitalGamma]", " ", 
+        SuperscriptBox["\[Epsilon]", "2"]}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"1296", " ", 
+           SuperscriptBox["J", "4"]}], "+", 
+          RowBox[{"864", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "3"], " ", "\[CapitalGamma]"}], "-", 
+          RowBox[{"279", " ", 
+           SuperscriptBox["J", "2"], " ", 
+           SuperscriptBox["\[CapitalGamma]", "2"]}], "-", 
+          RowBox[{"60", " ", "\[ImaginaryI]", " ", "J", " ", 
+           SuperscriptBox["\[CapitalGamma]", "3"]}], "+", 
+          SuperscriptBox["\[CapitalGamma]", "4"]}], ")"}], " ", 
+        SuperscriptBox["\[Epsilon]", "2"]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["J", "2"], " ", "\[CapitalGamma]", " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"3", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+           "\[CapitalGamma]"}], ")"}], "3"]}]]}], 
+     FractionBox[
+      RowBox[{
+       RowBox[{"2", " ", 
+        SuperscriptBox["J", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"9", " ", 
+           SuperscriptBox["J", "2"]}], "+", 
+          SuperscriptBox["\[CapitalGamma]", "2"]}], ")"}]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "36"}], " ", 
+           SuperscriptBox["J", "2"]}], "-", 
+          RowBox[{
+          "9", " ", "\[ImaginaryI]", " ", "J", " ", "\[CapitalGamma]"}], "+", 
+          
+          SuperscriptBox["\[CapitalGamma]", "2"]}], ")"}], " ", 
+        SuperscriptBox["\[Epsilon]", "2"]}]}], 
+      RowBox[{"J", " ", "\[CapitalGamma]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"3", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+         "\[CapitalGamma]"}], ")"}], " ", "\[Epsilon]"}]], 
+     FractionBox[
+      RowBox[{"3", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "2"}], " ", "\[ImaginaryI]", " ", 
+          SuperscriptBox["J", "2"]}], "+", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+             "\[CapitalGamma]"}], ")"}], " ", 
+           SuperscriptBox["\[Epsilon]", "2"]}], 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "3"}], " ", "J"}], "+", 
+           RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}]]}], ")"}]}], 
+      RowBox[{"\[CapitalGamma]", " ", "\[Epsilon]"}]], 
+     RowBox[{"2", "-", 
+      FractionBox[
+       RowBox[{"30", " ", "\[ImaginaryI]", " ", "J"}], 
+       RowBox[{
+        RowBox[{"3", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+        "\[CapitalGamma]"}]], "+", 
+      FractionBox[
+       RowBox[{"2", " ", 
+        SuperscriptBox["J", "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"3", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]"}], ")"}]}], 
+       RowBox[{"\[CapitalGamma]", " ", 
+        SuperscriptBox["\[Epsilon]", "2"]}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "1296"}], " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "4"]}], "+", 
+          RowBox[{"864", " ", 
+           SuperscriptBox["J", "3"], " ", "\[CapitalGamma]"}], "+", 
+          RowBox[{"279", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "2"], " ", 
+           SuperscriptBox["\[CapitalGamma]", "2"]}], "-", 
+          RowBox[{"60", " ", "J", " ", 
+           SuperscriptBox["\[CapitalGamma]", "3"]}], "-", 
+          RowBox[{"\[ImaginaryI]", " ", 
+           SuperscriptBox["\[CapitalGamma]", "4"]}]}], ")"}], " ", 
+        SuperscriptBox["\[Epsilon]", "2"]}], 
+       RowBox[{"2", " ", 
+        SuperscriptBox["J", "2"], " ", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"3", " ", "J"}], "-", 
+           RowBox[{"\[ImaginaryI]", " ", "\[CapitalGamma]"}]}], ")"}], "3"], 
+        " ", "\[CapitalGamma]"}]]}], 
+     RowBox[{"-", "1"}], "1", "0"},
+    {
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"6", " ", 
+            SuperscriptBox["J", "2"]}], "+", 
+           RowBox[{"\[CapitalGamma]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"-", "\[CapitalGamma]"}], "+", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}]}], 
+          ")"}]}], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"12", " ", "\[ImaginaryI]", " ", "J"}], "-", 
+           "\[CapitalGamma]", "+", 
+           RowBox[{"3", " ", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], " ", 
+         "\[Epsilon]"}]]}], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"864", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "4"]}], "+", 
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["\[CapitalGamma]", "3"], " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}], "-", 
+          RowBox[{"216", " ", 
+           SuperscriptBox["J", "3"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "\[CapitalGamma]"}], "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "-", 
+          RowBox[{"18", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "2"], " ", "\[CapitalGamma]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"3", " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"4", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "+", 
+          RowBox[{"3", " ", "J", " ", 
+           SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"9", " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"7", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+         ")"}], " ", "\[Epsilon]"}], 
+       RowBox[{
+        RowBox[{"144", " ", 
+         SuperscriptBox["J", "4"], " ", "\[CapitalGamma]"}], "+", 
+        RowBox[{"7", " ", 
+         SuperscriptBox["J", "2"], " ", 
+         SuperscriptBox["\[CapitalGamma]", "3"]}], "-", 
+        SuperscriptBox["\[CapitalGamma]", "5"]}]]}], 
+     FractionBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{"60", " ", "\[ImaginaryI]", " ", 
+         SuperscriptBox["J", "2"]}], "\[CapitalGamma]"], "+", 
+       FractionBox[
+        RowBox[{"6", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"396", " ", 
+            SuperscriptBox["J", "3"]}], "-", 
+           RowBox[{"15", " ", "\[ImaginaryI]", " ", 
+            SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"\[CapitalGamma]", "+", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+           RowBox[{"30", " ", "\[ImaginaryI]", " ", 
+            SuperscriptBox["J", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"8", " ", "\[CapitalGamma]"}], "+", 
+              RowBox[{"3", " ", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "16"}], " ", 
+                  SuperscriptBox["J", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "-", 
+           
+           RowBox[{"J", " ", "\[CapitalGamma]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"31", " ", "\[CapitalGamma]"}], "+", 
+              RowBox[{"45", " ", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "16"}], " ", 
+                  SuperscriptBox["J", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+          ")"}], " ", 
+         SuperscriptBox["\[Epsilon]", "2"]}], 
+        RowBox[{
+         SqrtBox[
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "16"}], " ", 
+            SuperscriptBox["J", "2"]}], "+", 
+           SuperscriptBox["\[CapitalGamma]", "2"]}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"9", " ", 
+            SuperscriptBox["J", "2"], " ", "\[CapitalGamma]"}], "+", 
+           SuperscriptBox["\[CapitalGamma]", "3"]}], ")"}]}]], "+", 
+       RowBox[{"J", " ", 
+        RowBox[{"(", 
+         RowBox[{"5", "-", 
+          FractionBox[
+           RowBox[{"3", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "80"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              RowBox[{"5", " ", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}], "+", 
+              RowBox[{"8", " ", 
+               SuperscriptBox["\[Epsilon]", "2"]}]}], ")"}]}], 
+           RowBox[{"\[CapitalGamma]", " ", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}]]}], ")"}]}]}], 
+      RowBox[{"10", " ", "\[Epsilon]"}]], 
+     FractionBox[
+      RowBox[{"4", " ", "\[CapitalGamma]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"144", " ", 
+          SuperscriptBox["J", "4"]}], "+", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["\[CapitalGamma]", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[CapitalGamma]", "-", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["J", "2"], " ", "\[CapitalGamma]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "73"}], " ", "\[CapitalGamma]"}], "+", 
+            RowBox[{"39", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "-", 
+         RowBox[{"36", " ", "\[ImaginaryI]", " ", "J", " ", 
+          RowBox[{"(", 
+           RowBox[{"\[CapitalGamma]", "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}], " ", 
+          SuperscriptBox["\[Epsilon]", "2"]}]}], ")"}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]", "-", 
+          RowBox[{"3", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], "2"], " ", 
+       
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[CapitalGamma]", "-", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["J", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "8"}], " ", "\[CapitalGamma]"}], "+", 
+            RowBox[{"3", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+        ")"}]}]], 
+     FractionBox[
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"60", " ", "\[ImaginaryI]", " ", 
+          SuperscriptBox["J", "2"]}], "\[CapitalGamma]"]}], "+", 
+       FractionBox[
+        RowBox[{"6", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "396"}], " ", 
+            SuperscriptBox["J", "3"]}], "+", 
+           RowBox[{"15", " ", "\[ImaginaryI]", " ", 
+            SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{"\[CapitalGamma]", "+", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "-", 
+           RowBox[{"30", " ", "\[ImaginaryI]", " ", 
+            SuperscriptBox["J", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"8", " ", "\[CapitalGamma]"}], "+", 
+              RowBox[{"3", " ", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "16"}], " ", 
+                  SuperscriptBox["J", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "+", 
+           
+           RowBox[{"J", " ", "\[CapitalGamma]", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"31", " ", "\[CapitalGamma]"}], "+", 
+              RowBox[{"45", " ", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "16"}], " ", 
+                  SuperscriptBox["J", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+          ")"}], " ", 
+         SuperscriptBox["\[Epsilon]", "2"]}], 
+        RowBox[{
+         SqrtBox[
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "16"}], " ", 
+            SuperscriptBox["J", "2"]}], "+", 
+           SuperscriptBox["\[CapitalGamma]", "2"]}]], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"9", " ", 
+            SuperscriptBox["J", "2"], " ", "\[CapitalGamma]"}], "+", 
+           SuperscriptBox["\[CapitalGamma]", "3"]}], ")"}]}]], "+", 
+       RowBox[{"J", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "5"}], "+", 
+          FractionBox[
+           RowBox[{"3", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "80"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              RowBox[{"5", " ", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}], "+", 
+              RowBox[{"8", " ", 
+               SuperscriptBox["\[Epsilon]", "2"]}]}], ")"}]}], 
+           RowBox[{"\[CapitalGamma]", " ", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}]]}], ")"}]}]}], 
+      RowBox[{"10", " ", "\[Epsilon]"}]], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"6", " ", 
+           SuperscriptBox["J", "2"]}], "+", 
+          RowBox[{"\[CapitalGamma]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"-", "\[CapitalGamma]"}], "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}]}], 
+         ")"}]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"12", " ", "\[ImaginaryI]", " ", "J"}], "-", 
+          "\[CapitalGamma]", "+", 
+          RowBox[{"3", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], " ", 
+        "\[Epsilon]"}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "864"}], " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "4"]}], "-", 
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["\[CapitalGamma]", "3"], " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}], "+", 
+          RowBox[{"216", " ", 
+           SuperscriptBox["J", "3"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "\[CapitalGamma]"}], "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+          RowBox[{"18", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "2"], " ", "\[CapitalGamma]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"3", " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"4", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "-", 
+          RowBox[{"3", " ", "J", " ", 
+           SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"9", " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"7", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+         ")"}], " ", "\[Epsilon]"}], 
+       RowBox[{
+        RowBox[{"144", " ", 
+         SuperscriptBox["J", "4"], " ", "\[CapitalGamma]"}], "+", 
+        RowBox[{"7", " ", 
+         SuperscriptBox["J", "2"], " ", 
+         SuperscriptBox["\[CapitalGamma]", "3"]}], "-", 
+        SuperscriptBox["\[CapitalGamma]", "5"]}]]}], 
+     FractionBox[
+      RowBox[{"4", " ", "\[CapitalGamma]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"144", " ", 
+          SuperscriptBox["J", "4"]}], "+", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["\[CapitalGamma]", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[CapitalGamma]", "-", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["J", "2"], " ", "\[CapitalGamma]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "73"}], " ", "\[CapitalGamma]"}], "+", 
+            RowBox[{"39", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "-", 
+         RowBox[{"36", " ", "\[ImaginaryI]", " ", "J", " ", 
+          RowBox[{"(", 
+           RowBox[{"\[CapitalGamma]", "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}], " ", 
+          SuperscriptBox["\[Epsilon]", "2"]}]}], ")"}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]", "-", 
+          RowBox[{"3", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], "2"], " ", 
+       
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["J", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"16", " ", "\[CapitalGamma]"}], "-", 
+            RowBox[{"6", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "\[CapitalGamma]"}], "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}]}], 
+        ")"}]}]], 
+     RowBox[{"-", "1"}], "1", "0"},
+    {
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox[
+        RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "6"}], " ", 
+            SuperscriptBox["J", "2"]}], "+", 
+           RowBox[{"\[CapitalGamma]", " ", 
+            RowBox[{"(", 
+             RowBox[{"\[CapitalGamma]", "+", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}]}], 
+          ")"}]}], 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+           "\[CapitalGamma]", "+", 
+           RowBox[{"3", " ", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], " ", 
+         "\[Epsilon]"}]]}], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"864", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "4"]}], "-", 
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["\[CapitalGamma]", "3"], " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}], "+", 
+          RowBox[{"3", " ", "J", " ", 
+           SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"9", " ", "\[CapitalGamma]"}], "-", 
+             RowBox[{"7", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "+", 
+          RowBox[{"216", " ", 
+           SuperscriptBox["J", "3"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "2"}], " ", "\[CapitalGamma]"}], "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+          RowBox[{"18", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "2"], " ", "\[CapitalGamma]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "3"}], " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"4", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+         ")"}], " ", "\[Epsilon]"}], 
+       RowBox[{
+        RowBox[{"144", " ", 
+         SuperscriptBox["J", "4"], " ", "\[CapitalGamma]"}], "+", 
+        RowBox[{"7", " ", 
+         SuperscriptBox["J", "2"], " ", 
+         SuperscriptBox["\[CapitalGamma]", "3"]}], "-", 
+        SuperscriptBox["\[CapitalGamma]", "5"]}]]}], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"J", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"12", " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]", "+", 
+          RowBox[{"3", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], 
+       RowBox[{"2", " ", "\[CapitalGamma]", " ", "\[Epsilon]"}]], "+", 
+      FractionBox[
+       RowBox[{"24", " ", "J", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"288", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "3"]}], "+", 
+          RowBox[{"4", " ", 
+           SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"\[CapitalGamma]", "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "-", 
+          RowBox[{"24", " ", 
+           SuperscriptBox["J", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"2", " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"3", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "-", 
+          RowBox[{
+          "3", " ", "\[ImaginaryI]", " ", "J", " ", "\[CapitalGamma]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"5", " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"3", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+         ")"}], " ", "\[Epsilon]"}], 
+       RowBox[{
+        SuperscriptBox[
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+           "\[CapitalGamma]", "+", 
+           RowBox[{"3", " ", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], "2"], " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", 
+            SuperscriptBox["\[CapitalGamma]", "2"]}], " ", 
+           RowBox[{"(", 
+            RowBox[{"\[CapitalGamma]", "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+          RowBox[{"2", " ", 
+           SuperscriptBox["J", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"8", " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"3", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+         ")"}]}]]}], 
+     FractionBox[
+      RowBox[{"4", " ", "\[CapitalGamma]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"144", " ", 
+          SuperscriptBox["J", "4"]}], "+", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["\[CapitalGamma]", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[CapitalGamma]", "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "-", 
+         RowBox[{
+          SuperscriptBox["J", "2"], " ", "\[CapitalGamma]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"73", " ", "\[CapitalGamma]"}], "+", 
+            RowBox[{"39", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "+", 
+         RowBox[{"36", " ", "\[ImaginaryI]", " ", "J", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "\[CapitalGamma]"}], "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}], " ", 
+          SuperscriptBox["\[Epsilon]", "2"]}]}], ")"}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]", "+", 
+          RowBox[{"3", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], "2"], " ", 
+       
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[CapitalGamma]", "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "-", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["J", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"8", " ", "\[CapitalGamma]"}], "+", 
+            RowBox[{"3", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+        ")"}]}]], 
+     FractionBox[
+      RowBox[{"J", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"-", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+              "\[CapitalGamma]", "+", 
+              RowBox[{"3", " ", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "16"}], " ", 
+                  SuperscriptBox["J", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"5", " ", "\[CapitalGamma]"}], "+", 
+              RowBox[{"3", " ", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "16"}], " ", 
+                  SuperscriptBox["J", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], 
+           ")"}]}], "+", 
+         FractionBox[
+          RowBox[{"24", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "288"}], " ", "\[ImaginaryI]", " ", 
+              SuperscriptBox["J", "3"]}], "-", 
+             RowBox[{"4", " ", 
+              SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+              RowBox[{"(", 
+               RowBox[{"\[CapitalGamma]", "+", 
+                SqrtBox[
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"-", "16"}], " ", 
+                   SuperscriptBox["J", "2"]}], "+", 
+                  SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+             RowBox[{"24", " ", 
+              SuperscriptBox["J", "2"], " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"2", " ", "\[CapitalGamma]"}], "+", 
+                RowBox[{"3", " ", 
+                 SqrtBox[
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "16"}], " ", 
+                    SuperscriptBox["J", "2"]}], "+", 
+                   SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], 
+             "+", 
+             RowBox[{
+             "3", " ", "\[ImaginaryI]", " ", "J", " ", "\[CapitalGamma]", " ", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"5", " ", "\[CapitalGamma]"}], "+", 
+                RowBox[{"3", " ", 
+                 SqrtBox[
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"-", "16"}], " ", 
+                    SuperscriptBox["J", "2"]}], "+", 
+                   SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+            ")"}], " ", 
+           SuperscriptBox["\[Epsilon]", "2"]}], 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}], " ", 
+            RowBox[{"(", 
+             RowBox[{"\[CapitalGamma]", "+", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+           RowBox[{"2", " ", 
+            SuperscriptBox["J", "2"], " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"8", " ", "\[CapitalGamma]"}], "+", 
+              RowBox[{"3", " ", 
+               SqrtBox[
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"-", "16"}], " ", 
+                  SuperscriptBox["J", "2"]}], "+", 
+                 SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}]]}], 
+        ")"}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]", "+", 
+          RowBox[{"3", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], "2"], " ", 
+       "\[Epsilon]"}]], 
+     RowBox[{
+      FractionBox[
+       RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "6"}], " ", 
+           SuperscriptBox["J", "2"]}], "+", 
+          RowBox[{"\[CapitalGamma]", " ", 
+           RowBox[{"(", 
+            RowBox[{"\[CapitalGamma]", "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}]}], 
+         ")"}]}], 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]", "+", 
+          RowBox[{"3", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], " ", 
+        "\[Epsilon]"}]], "+", 
+      FractionBox[
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "864"}], " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "4"]}], "+", 
+          RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["\[CapitalGamma]", "3"], " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}], "-", 
+          RowBox[{"216", " ", 
+           SuperscriptBox["J", "3"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "2"}], " ", "\[CapitalGamma]"}], "+", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "-", 
+          RowBox[{"18", " ", "\[ImaginaryI]", " ", 
+           SuperscriptBox["J", "2"], " ", "\[CapitalGamma]", " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "3"}], " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"4", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "+", 
+          RowBox[{"3", " ", "J", " ", 
+           SuperscriptBox["\[CapitalGamma]", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "9"}], " ", "\[CapitalGamma]"}], "+", 
+             RowBox[{"7", " ", 
+              SqrtBox[
+               RowBox[{
+                RowBox[{
+                 RowBox[{"-", "16"}], " ", 
+                 SuperscriptBox["J", "2"]}], "+", 
+                SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+         ")"}], " ", "\[Epsilon]"}], 
+       RowBox[{
+        RowBox[{"144", " ", 
+         SuperscriptBox["J", "4"], " ", "\[CapitalGamma]"}], "+", 
+        RowBox[{"7", " ", 
+         SuperscriptBox["J", "2"], " ", 
+         SuperscriptBox["\[CapitalGamma]", "3"]}], "-", 
+        SuperscriptBox["\[CapitalGamma]", "5"]}]]}], 
+     FractionBox[
+      RowBox[{"4", " ", "\[CapitalGamma]", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"144", " ", 
+          SuperscriptBox["J", "4"]}], "+", 
+         RowBox[{"4", " ", 
+          SuperscriptBox["\[CapitalGamma]", "3"], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[CapitalGamma]", "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "-", 
+         RowBox[{
+          SuperscriptBox["J", "2"], " ", "\[CapitalGamma]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"73", " ", "\[CapitalGamma]"}], "+", 
+            RowBox[{"39", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}], "+", 
+         RowBox[{"36", " ", "\[ImaginaryI]", " ", "J", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "\[CapitalGamma]"}], "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}], " ", 
+          SuperscriptBox["\[Epsilon]", "2"]}]}], ")"}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"-", "12"}], " ", "\[ImaginaryI]", " ", "J"}], "+", 
+          "\[CapitalGamma]", "+", 
+          RowBox[{"3", " ", 
+           SqrtBox[
+            RowBox[{
+             RowBox[{
+              RowBox[{"-", "16"}], " ", 
+              SuperscriptBox["J", "2"]}], "+", 
+             SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}], "2"], " ", 
+       
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", 
+           SuperscriptBox["\[CapitalGamma]", "2"]}], " ", 
+          RowBox[{"(", 
+           RowBox[{"\[CapitalGamma]", "+", 
+            SqrtBox[
+             RowBox[{
+              RowBox[{
+               RowBox[{"-", "16"}], " ", 
+               SuperscriptBox["J", "2"]}], "+", 
+              SuperscriptBox["\[CapitalGamma]", "2"]}]]}], ")"}]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["J", "2"], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"8", " ", "\[CapitalGamma]"}], "+", 
+            RowBox[{"3", " ", 
+             SqrtBox[
+              RowBox[{
+               RowBox[{
+                RowBox[{"-", "16"}], " ", 
+                SuperscriptBox["J", "2"]}], "+", 
+               SuperscriptBox["\[CapitalGamma]", "2"]}]]}]}], ")"}]}]}], 
+        ")"}]}]], 
+     RowBox[{"-", "1"}], "1", "0"}
+   },
+   GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.990706945115757*^9},
+ CellLabel->
+  "Out[52]//TableForm=",ExpressionUUID->"5c417a8b-1948-457c-9f65-\
+e9dbdecc24fb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"evecsSeriesSimplified", " ", "//", "InputForm"}]], "Input",
+ CellChangeTimes->{{3.990706966086952*^9, 3.9907069731944017`*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"0783b84f-658b-49e7-8859-2aa03f4f9521"],
+
+Cell["\<\
+{{1, 0, 0, 0, 1, 0, 0, 0, 1}, {0, J/\[Epsilon], 1, J/\[Epsilon], 0, 1, 1, 1, \
+0}, {-1/2, (3*\[Epsilon]^2)/(J^2 + \[CapitalGamma]^2), (-3*\[Epsilon])/(2*(J \
+- I*\[CapitalGamma])), (3*\[Epsilon]^2)/(J^2 + \[CapitalGamma]^2), -1/2, (-3*\
+\[Epsilon])/(2*(J - I*\[CapitalGamma])), 
+  (-3*\[Epsilon])/(2*(J + I*\[CapitalGamma])), (-3*\[Epsilon])/(2*(J + I*\
+\[CapitalGamma])), 1}, {-1/2, (-(J^2*(J - I*\[CapitalGamma])) + (((-4*I)*J - \
+\[CapitalGamma])*\[CapitalGamma]*\[Epsilon]^2)/(J - \
+I*\[CapitalGamma]))/(2*J^3), 
+  (J - I*\[CapitalGamma])/(2*\[Epsilon]) + ((4*J^2 + (3*I)*J*\[CapitalGamma] \
++ \[CapitalGamma]^2)*\[Epsilon])/(4*J^2*(J - I*\[CapitalGamma])), (-(J^2*(J - \
+I*\[CapitalGamma])^2) + ((-4*I)*J - \[CapitalGamma])*\[CapitalGamma]*\
+\[Epsilon]^2)/(2*J^3*(J - I*\[CapitalGamma])), -1/2, 
+  (J - I*\[CapitalGamma])/(2*\[Epsilon]) + ((4*J^2 + (3*I)*J*\[CapitalGamma] \
++ \[CapitalGamma]^2)*\[Epsilon])/(4*J^2*(J - I*\[CapitalGamma])), ((-4*J + I*\
+\[CapitalGamma])*\[Epsilon])/(4*J^2), ((-4*J + \
+I*\[CapitalGamma])*\[Epsilon])/(4*J^2), 1}, 
+ {-1/2, (-(J^2*(J + I*\[CapitalGamma])) + (((4*I)*J - \[CapitalGamma])*\
+\[CapitalGamma]*\[Epsilon]^2)/(J + I*\[CapitalGamma]))/(2*J^3), -1/4*((4*J + \
+I*\[CapitalGamma])*\[Epsilon])/J^2, (-(J^2*(J + I*\[CapitalGamma])^2) + \
+((4*I)*J - \[CapitalGamma])*\[CapitalGamma]*\[Epsilon]^2)/(2*J^3*(J + I*\
+\[CapitalGamma])), 
+  -1/2, -1/4*((4*J + I*\[CapitalGamma])*\[Epsilon])/J^2, (J + I*\
+\[CapitalGamma])/(2*\[Epsilon]) + ((4*J^2 - (3*I)*J*\[CapitalGamma] + \
+\[CapitalGamma]^2)*\[Epsilon])/(4*J^2*(J + I*\[CapitalGamma])), 
+  (J + I*\[CapitalGamma])/(2*\[Epsilon]) + ((4*J^2 - (3*I)*J*\[CapitalGamma] \
++ \[CapitalGamma]^2)*\[Epsilon])/(4*J^2*(J + I*\[CapitalGamma])), 1}, {(3*\
+\[Epsilon])/(3*J + I*\[CapitalGamma]), ((-3*J + \
+I*\[CapitalGamma])*\[Epsilon])/(J*(3*J + I*\[CapitalGamma])), 
+  -1/2*(\[CapitalGamma]*\[Epsilon]^2)/(J^2*((-3*I)*J + \[CapitalGamma])), \
+(3*J*\[Epsilon] - I*\[CapitalGamma]*\[Epsilon])/(3*J^2 + \
+I*J*\[CapitalGamma]), (-3*\[Epsilon])/(3*J + I*\[CapitalGamma]), (\
+\[CapitalGamma]*\[Epsilon]^2)/(2*J^2*((-3*I)*J + \[CapitalGamma])), -1, 1, 0}, 
+ {(3*((2*I)*J^2 + ((12*J + I*\[CapitalGamma])*\[Epsilon]^2)/((3*I)*J + \
+\[CapitalGamma])))/(\[CapitalGamma]*\[Epsilon]), -((2*J^2*(9*J^2 + \
+\[CapitalGamma]^2) + (-36*J^2 - (9*I)*J*\[CapitalGamma] + \[CapitalGamma]^2)*\
+\[Epsilon]^2)/(J*\[CapitalGamma]*((3*I)*J + \[CapitalGamma])*\[Epsilon])), 
+  -2 + ((30*I)*J)/((3*I)*J + \[CapitalGamma]) - (2*J^2*((3*I)*J + \
+\[CapitalGamma]))/(\[CapitalGamma]*\[Epsilon]^2) + ((1296*J^4 + (864*I)*J^3*\
+\[CapitalGamma] - 279*J^2*\[CapitalGamma]^2 - (60*I)*J*\[CapitalGamma]^3 + \
+\[CapitalGamma]^4)*\[Epsilon]^2)/(2*J^2*\[CapitalGamma]*((3*I)*J + \
+\[CapitalGamma])^3), 
+  (2*J^2*(9*J^2 + \[CapitalGamma]^2) + (-36*J^2 - (9*I)*J*\[CapitalGamma] + \
+\[CapitalGamma]^2)*\[Epsilon]^2)/(J*\[CapitalGamma]*((3*I)*J + \
+\[CapitalGamma])*\[Epsilon]), (3*((-2*I)*J^2 + (((-12*I)*J + \
+\[CapitalGamma])*\[Epsilon]^2)/(-3*J + I*\[CapitalGamma])))/(\[CapitalGamma]*\
+\[Epsilon]), 
+  2 - ((30*I)*J)/((3*I)*J + \[CapitalGamma]) + (2*J^2*((3*I)*J + \
+\[CapitalGamma]))/(\[CapitalGamma]*\[Epsilon]^2) + (((-1296*I)*J^4 + 864*J^3*\
+\[CapitalGamma] + (279*I)*J^2*\[CapitalGamma]^2 - 60*J*\[CapitalGamma]^3 - I*\
+\[CapitalGamma]^4)*\[Epsilon]^2)/(2*J^2*(3*J - I*\[CapitalGamma])^3*\
+\[CapitalGamma]), 
+  -1, 1, 0}, {((-2*I)*(6*J^2 + \[CapitalGamma]*(-\[CapitalGamma] + \
+Sqrt[-16*J^2 + \[CapitalGamma]^2])))/(((12*I)*J - \[CapitalGamma] + \
+3*Sqrt[-16*J^2 + \[CapitalGamma]^2])*\[Epsilon]) + 
+   (((864*I)*J^4 + (2*I)*\[CapitalGamma]^3*Sqrt[-16*J^2 + \[CapitalGamma]^2] \
+- 216*J^3*(2*\[CapitalGamma] + Sqrt[-16*J^2 + \[CapitalGamma]^2]) - \
+(18*I)*J^2*\[CapitalGamma]*(3*\[CapitalGamma] + 4*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) + 
+      3*J*\[CapitalGamma]^2*(9*\[CapitalGamma] + 7*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]))*\[Epsilon])/(144*J^4*\[CapitalGamma] + 7*J^2*\
+\[CapitalGamma]^3 - \[CapitalGamma]^5), 
+  (((60*I)*J^2)/\[CapitalGamma] + (6*(396*J^3 - (15*I)*\[CapitalGamma]^2*(\
+\[CapitalGamma] + Sqrt[-16*J^2 + \[CapitalGamma]^2]) + (30*I)*J^2*(8*\
+\[CapitalGamma] + 3*Sqrt[-16*J^2 + \[CapitalGamma]^2]) - \
+J*\[CapitalGamma]*(31*\[CapitalGamma] + 45*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]))*\[Epsilon]^2)/
+     (Sqrt[-16*J^2 + \[CapitalGamma]^2]*(9*J^2*\[CapitalGamma] + \
+\[CapitalGamma]^3)) + J*(5 - (3*(-80*J^2 + 5*\[CapitalGamma]^2 + \
+8*\[Epsilon]^2))/(\[CapitalGamma]*Sqrt[-16*J^2 + \[CapitalGamma]^2])))/(10*\
+\[Epsilon]), 
+  (4*\[CapitalGamma]*(144*J^4 + 4*\[CapitalGamma]^3*(\[CapitalGamma] - \
+Sqrt[-16*J^2 + \[CapitalGamma]^2]) + J^2*\[CapitalGamma]*(-73*\[CapitalGamma] \
++ 39*Sqrt[-16*J^2 + \[CapitalGamma]^2]) - (36*I)*J*(\[CapitalGamma] + \
+Sqrt[-16*J^2 + \[CapitalGamma]^2])*\[Epsilon]^2))/
+   (((-12*I)*J + \[CapitalGamma] - 3*Sqrt[-16*J^2 + \[CapitalGamma]^2])^2*(\
+\[CapitalGamma]^2*(\[CapitalGamma] - Sqrt[-16*J^2 + \[CapitalGamma]^2]) + \
+2*J^2*(-8*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \[CapitalGamma]^2]))), 
+  (((-60*I)*J^2)/\[CapitalGamma] + (6*(-396*J^3 + (15*I)*\[CapitalGamma]^2*(\
+\[CapitalGamma] + Sqrt[-16*J^2 + \[CapitalGamma]^2]) - (30*I)*J^2*(8*\
+\[CapitalGamma] + 3*Sqrt[-16*J^2 + \[CapitalGamma]^2]) + \
+J*\[CapitalGamma]*(31*\[CapitalGamma] + 45*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]))*\[Epsilon]^2)/
+     (Sqrt[-16*J^2 + \[CapitalGamma]^2]*(9*J^2*\[CapitalGamma] + \
+\[CapitalGamma]^3)) + J*(-5 + (3*(-80*J^2 + 5*\[CapitalGamma]^2 + \
+8*\[Epsilon]^2))/(\[CapitalGamma]*Sqrt[-16*J^2 + \[CapitalGamma]^2])))/(10*\
+\[Epsilon]), 
+  ((2*I)*(6*J^2 + \[CapitalGamma]*(-\[CapitalGamma] + Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])))/(((12*I)*J - \[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])*\[Epsilon]) + 
+   (((-864*I)*J^4 - (2*I)*\[CapitalGamma]^3*Sqrt[-16*J^2 + \[CapitalGamma]^2] \
++ 216*J^3*(2*\[CapitalGamma] + Sqrt[-16*J^2 + \[CapitalGamma]^2]) + \
+(18*I)*J^2*\[CapitalGamma]*(3*\[CapitalGamma] + 4*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) - 
+      3*J*\[CapitalGamma]^2*(9*\[CapitalGamma] + 7*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]))*\[Epsilon])/(144*J^4*\[CapitalGamma] + 7*J^2*\
+\[CapitalGamma]^3 - \[CapitalGamma]^5), 
+  (4*\[CapitalGamma]*(144*J^4 + 4*\[CapitalGamma]^3*(\[CapitalGamma] - \
+Sqrt[-16*J^2 + \[CapitalGamma]^2]) + J^2*\[CapitalGamma]*(-73*\[CapitalGamma] \
++ 39*Sqrt[-16*J^2 + \[CapitalGamma]^2]) - (36*I)*J*(\[CapitalGamma] + \
+Sqrt[-16*J^2 + \[CapitalGamma]^2])*\[Epsilon]^2))/
+   (((-12*I)*J + \[CapitalGamma] - 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])^2*(J^2*(16*\[CapitalGamma] - 6*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) + \[CapitalGamma]^2*(-\[CapitalGamma] + Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]))), -1, 1, 0}, 
+ {((-2*I)*(-6*J^2 + \[CapitalGamma]*(\[CapitalGamma] + Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])))/(((-12*I)*J + \[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])*\[Epsilon]) + 
+   (((864*I)*J^4 - (2*I)*\[CapitalGamma]^3*Sqrt[-16*J^2 + \[CapitalGamma]^2] \
++ 3*J*\[CapitalGamma]^2*(9*\[CapitalGamma] - 7*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) + 216*J^3*(-2*\[CapitalGamma] + Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) + 
+      (18*I)*J^2*\[CapitalGamma]*(-3*\[CapitalGamma] + 4*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]))*\[Epsilon])/(144*J^4*\[CapitalGamma] + 7*J^2*\
+\[CapitalGamma]^3 - \[CapitalGamma]^5), (J*((12*I)*J + \[CapitalGamma] + \
+3*Sqrt[-16*J^2 + \[CapitalGamma]^2]))/(2*\[CapitalGamma]*\[Epsilon]) + 
+   (24*J*((288*I)*J^3 + 4*\[CapitalGamma]^2*(\[CapitalGamma] + Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) - 24*J^2*(2*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) - (3*I)*J*\[CapitalGamma]*(5*\[CapitalGamma] + \
+3*Sqrt[-16*J^2 + \[CapitalGamma]^2]))*\[Epsilon])/
+    (((-12*I)*J + \[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])^2*(-(\[CapitalGamma]^2*(\[CapitalGamma] + Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])) + 2*J^2*(8*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]))), 
+  (4*\[CapitalGamma]*(144*J^4 + 4*\[CapitalGamma]^3*(\[CapitalGamma] + \
+Sqrt[-16*J^2 + \[CapitalGamma]^2]) - J^2*\[CapitalGamma]*(73*\[CapitalGamma] \
++ 39*Sqrt[-16*J^2 + \[CapitalGamma]^2]) + (36*I)*J*(-\[CapitalGamma] + \
+Sqrt[-16*J^2 + \[CapitalGamma]^2])*\[Epsilon]^2))/
+   (((-12*I)*J + \[CapitalGamma] + 3*Sqrt[-16*J^2 + \[CapitalGamma]^2])^2*(\
+\[CapitalGamma]^2*(\[CapitalGamma] + Sqrt[-16*J^2 + \[CapitalGamma]^2]) - \
+2*J^2*(8*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \[CapitalGamma]^2]))), 
+  (J*(-(((-12*I)*J + \[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])*(5*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])) + 
+     (24*((-288*I)*J^3 - 4*\[CapitalGamma]^2*(\[CapitalGamma] + Sqrt[-16*J^2 \
++ \[CapitalGamma]^2]) + 24*J^2*(2*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) + (3*I)*J*\[CapitalGamma]*(5*\[CapitalGamma] + \
+3*Sqrt[-16*J^2 + \[CapitalGamma]^2]))*\[Epsilon]^2)/
+      (-(\[CapitalGamma]^2*(\[CapitalGamma] + Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])) + 2*J^2*(8*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]))))/(((-12*I)*J + \[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])^2*\[Epsilon]), 
+  ((2*I)*(-6*J^2 + \[CapitalGamma]*(\[CapitalGamma] + Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])))/(((-12*I)*J + \[CapitalGamma] + 3*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2])*\[Epsilon]) + 
+   (((-864*I)*J^4 + (2*I)*\[CapitalGamma]^3*Sqrt[-16*J^2 + \[CapitalGamma]^2] \
+- 216*J^3*(-2*\[CapitalGamma] + Sqrt[-16*J^2 + \[CapitalGamma]^2]) - \
+(18*I)*J^2*\[CapitalGamma]*(-3*\[CapitalGamma] + 4*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]) + 
+      3*J*\[CapitalGamma]^2*(-9*\[CapitalGamma] + 7*Sqrt[-16*J^2 + \
+\[CapitalGamma]^2]))*\[Epsilon])/(144*J^4*\[CapitalGamma] + 7*J^2*\
+\[CapitalGamma]^3 - \[CapitalGamma]^5), 
+  (4*\[CapitalGamma]*(144*J^4 + 4*\[CapitalGamma]^3*(\[CapitalGamma] + \
+Sqrt[-16*J^2 + \[CapitalGamma]^2]) - J^2*\[CapitalGamma]*(73*\[CapitalGamma] \
++ 39*Sqrt[-16*J^2 + \[CapitalGamma]^2]) + (36*I)*J*(-\[CapitalGamma] + \
+Sqrt[-16*J^2 + \[CapitalGamma]^2])*\[Epsilon]^2))/
+   (((-12*I)*J + \[CapitalGamma] + 3*Sqrt[-16*J^2 + \[CapitalGamma]^2])^2*(-(\
+\[CapitalGamma]^2*(\[CapitalGamma] + Sqrt[-16*J^2 + \[CapitalGamma]^2])) + \
+2*J^2*(8*\[CapitalGamma] + 3*Sqrt[-16*J^2 + \[CapitalGamma]^2]))), -1, 1, 0}}\
+\
+\>", "Output",
+ CellChangeTimes->{3.9907069736025343`*^9},
+ CellLabel->
+  "Out[53]//InputForm=",ExpressionUUID->"456ab6ef-b9f6-44ac-b24d-\
+00c147d8cbd5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"ToRadicals", "[", "#", "]"}], " ", "&"}], "/@", " ", "evals"}], "//",
+   "InputForm"}]], "Input",
+ CellChangeTimes->{{3.990708095951006*^9, 3.990708099262781*^9}, {
+  3.990709377270123*^9, 3.990709402993153*^9}},
+ CellLabel->"In[59]:=",ExpressionUUID->"b9a13d1a-2822-4563-9835-aa36a0e4ec5c"],
+
+Cell["\<\
+{0, -\[CapitalGamma], (-2*\[CapitalGamma])/3 - (2^(1/3)*(3*J^2 - \
+\[CapitalGamma]^2 + 24*\[Epsilon]^2))/(3*(18*J^2*\[CapitalGamma] + 2*\
+\[CapitalGamma]^3 - 18*\[CapitalGamma]*\[Epsilon]^2 + Sqrt[4*(3*J^2 - \
+\[CapitalGamma]^2 + 24*\[Epsilon]^2)^3 + (18*J^2*\[CapitalGamma] + 2*\
+\[CapitalGamma]^3 - 18*\[CapitalGamma]*\[Epsilon]^2)^2])^
+     (1/3)) + (18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2 + Sqrt[4*(3*J^2 - \[CapitalGamma]^2 + 24*\
+\[Epsilon]^2)^3 + (18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2)^2])^(1/3)/(3*2^(1/3)), 
+ (-2*\[CapitalGamma])/3 + ((1 + I*Sqrt[3])*(3*J^2 - \[CapitalGamma]^2 + 24*\
+\[Epsilon]^2))/
+   (3*2^(2/3)*(18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2 + Sqrt[4*(3*J^2 - \[CapitalGamma]^2 + 24*\
+\[Epsilon]^2)^3 + (18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2)^2])^(1/3)) - 
+  ((1 - I*Sqrt[3])*(18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2 + Sqrt[4*(3*J^2 - \[CapitalGamma]^2 + 24*\
+\[Epsilon]^2)^3 + (18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2)^2])^(1/3))/(6*2^(1/3)), 
+ (-2*\[CapitalGamma])/3 + ((1 - I*Sqrt[3])*(3*J^2 - \[CapitalGamma]^2 + 24*\
+\[Epsilon]^2))/
+   (3*2^(2/3)*(18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2 + Sqrt[4*(3*J^2 - \[CapitalGamma]^2 + 24*\
+\[Epsilon]^2)^3 + (18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2)^2])^(1/3)) - 
+  ((1 + I*Sqrt[3])*(18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2 + Sqrt[4*(3*J^2 - \[CapitalGamma]^2 + 24*\
+\[Epsilon]^2)^3 + (18*J^2*\[CapitalGamma] + 2*\[CapitalGamma]^3 - 18*\
+\[CapitalGamma]*\[Epsilon]^2)^2])^(1/3))/(6*2^(1/3)), 
+ (-3*\[CapitalGamma])/4 - Sqrt[-5*J^2 - (3*\[CapitalGamma]^2)/4 - \
+4*\[Epsilon]^2 + (5*J^2 + 3*\[CapitalGamma]^2 + 4*\[Epsilon]^2)/3 + \
+(2^(1/3)*(73*J^4 - 3*J^2*\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 64*\[Epsilon]^4))/
+      (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+         Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+           4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+           864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) + 
+     (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - 234*J^2*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + \
+144*\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+        Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+          4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+          864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3))]/2 - 
+  Sqrt[-5*J^2 + (3*\[CapitalGamma]^2)/2 - 4*\[Epsilon]^2 + (-5*J^2 - 3*\
+\[CapitalGamma]^2 - 4*\[Epsilon]^2)/3 - (2^(1/3)*(73*J^4 - 3*J^2*\
+\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\[CapitalGamma]^2*\[Epsilon]^2 + \
+64*\[Epsilon]^4))/
+      (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+         Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+           4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+           864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) - 
+     (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - 234*J^2*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + \
+144*\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+        Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+          4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+          864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3)) - 
+     (-27*\[CapitalGamma]^3 + 12*\[CapitalGamma]*(5*J^2 + 3*\[CapitalGamma]^2 \
++ 4*\[Epsilon]^2) - 8*(9*J^2*\[CapitalGamma] + \[CapitalGamma]^3 + 6*\
+\[CapitalGamma]*\[Epsilon]^2))/
+      (4*Sqrt[-5*J^2 - (3*\[CapitalGamma]^2)/4 - 4*\[Epsilon]^2 + (5*J^2 + 3*\
+\[CapitalGamma]^2 + 4*\[Epsilon]^2)/3 + (2^(1/3)*(73*J^4 - 3*J^2*\
+\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\[CapitalGamma]^2*\[Epsilon]^2 + \
+64*\[Epsilon]^4))/
+          (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+             Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+               4618944*J^8*\[Epsilon]^4 - 1329696*J^6*\[CapitalGamma]^2*\
+\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\[Epsilon]^4 + 1296*J^2*\
+\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\[Epsilon]^6 + 497664*J^4*\
+\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\[CapitalGamma]^4*\[Epsilon]^6 + \
+864*
+                \[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) + 
+         (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+            Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+              4618944*J^8*\[Epsilon]^4 - 1329696*J^6*\[CapitalGamma]^2*\
+\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\[Epsilon]^4 + 1296*J^2*\
+\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\[Epsilon]^6 + 497664*J^4*\
+\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\[CapitalGamma]^4*\[Epsilon]^6 + 
+              864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3))])]/2, 
+ (-3*\[CapitalGamma])/4 - Sqrt[-5*J^2 - (3*\[CapitalGamma]^2)/4 - \
+4*\[Epsilon]^2 + (5*J^2 + 3*\[CapitalGamma]^2 + 4*\[Epsilon]^2)/3 + \
+(2^(1/3)*(73*J^4 - 3*J^2*\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 64*\[Epsilon]^4))/
+      (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+         Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+           4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+           864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) + 
+     (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - 234*J^2*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + \
+144*\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+        Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+          4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+          864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3))]/2 + 
+  Sqrt[-5*J^2 + (3*\[CapitalGamma]^2)/2 - 4*\[Epsilon]^2 + (-5*J^2 - 3*\
+\[CapitalGamma]^2 - 4*\[Epsilon]^2)/3 - (2^(1/3)*(73*J^4 - 3*J^2*\
+\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\[CapitalGamma]^2*\[Epsilon]^2 + \
+64*\[Epsilon]^4))/
+      (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+         Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+           4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+           864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) - 
+     (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - 234*J^2*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + \
+144*\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+        Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+          4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+          864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3)) - 
+     (-27*\[CapitalGamma]^3 + 12*\[CapitalGamma]*(5*J^2 + 3*\[CapitalGamma]^2 \
++ 4*\[Epsilon]^2) - 8*(9*J^2*\[CapitalGamma] + \[CapitalGamma]^3 + 6*\
+\[CapitalGamma]*\[Epsilon]^2))/
+      (4*Sqrt[-5*J^2 - (3*\[CapitalGamma]^2)/4 - 4*\[Epsilon]^2 + (5*J^2 + 3*\
+\[CapitalGamma]^2 + 4*\[Epsilon]^2)/3 + (2^(1/3)*(73*J^4 - 3*J^2*\
+\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\[CapitalGamma]^2*\[Epsilon]^2 + \
+64*\[Epsilon]^4))/
+          (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+             Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+               4618944*J^8*\[Epsilon]^4 - 1329696*J^6*\[CapitalGamma]^2*\
+\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\[Epsilon]^4 + 1296*J^2*\
+\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\[Epsilon]^6 + 497664*J^4*\
+\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\[CapitalGamma]^4*\[Epsilon]^6 + \
+864*
+                \[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) + 
+         (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+            Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+              4618944*J^8*\[Epsilon]^4 - 1329696*J^6*\[CapitalGamma]^2*\
+\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\[Epsilon]^4 + 1296*J^2*\
+\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\[Epsilon]^6 + 497664*J^4*\
+\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\[CapitalGamma]^4*\[Epsilon]^6 + 
+              864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3))])]/2, 
+ (-3*\[CapitalGamma])/4 + Sqrt[-5*J^2 - (3*\[CapitalGamma]^2)/4 - \
+4*\[Epsilon]^2 + (5*J^2 + 3*\[CapitalGamma]^2 + 4*\[Epsilon]^2)/3 + \
+(2^(1/3)*(73*J^4 - 3*J^2*\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 64*\[Epsilon]^4))/
+      (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+         Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+           4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+           864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) + 
+     (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - 234*J^2*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + \
+144*\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+        Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+          4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+          864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3))]/2 - 
+  Sqrt[-5*J^2 + (3*\[CapitalGamma]^2)/2 - 4*\[Epsilon]^2 + (-5*J^2 - 3*\
+\[CapitalGamma]^2 - 4*\[Epsilon]^2)/3 - (2^(1/3)*(73*J^4 - 3*J^2*\
+\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\[CapitalGamma]^2*\[Epsilon]^2 + \
+64*\[Epsilon]^4))/
+      (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+         Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+           4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+           864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) - 
+     (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - 234*J^2*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + \
+144*\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+        Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+          4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+          864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3)) + 
+     (-27*\[CapitalGamma]^3 + 12*\[CapitalGamma]*(5*J^2 + 3*\[CapitalGamma]^2 \
++ 4*\[Epsilon]^2) - 8*(9*J^2*\[CapitalGamma] + \[CapitalGamma]^3 + 6*\
+\[CapitalGamma]*\[Epsilon]^2))/
+      (4*Sqrt[-5*J^2 - (3*\[CapitalGamma]^2)/4 - 4*\[Epsilon]^2 + (5*J^2 + 3*\
+\[CapitalGamma]^2 + 4*\[Epsilon]^2)/3 + (2^(1/3)*(73*J^4 - 3*J^2*\
+\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\[CapitalGamma]^2*\[Epsilon]^2 + \
+64*\[Epsilon]^4))/
+          (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+             Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+               4618944*J^8*\[Epsilon]^4 - 1329696*J^6*\[CapitalGamma]^2*\
+\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\[Epsilon]^4 + 1296*J^2*\
+\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\[Epsilon]^6 + 497664*J^4*\
+\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\[CapitalGamma]^4*\[Epsilon]^6 + \
+864*
+                \[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) + 
+         (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+            Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+              4618944*J^8*\[Epsilon]^4 - 1329696*J^6*\[CapitalGamma]^2*\
+\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\[Epsilon]^4 + 1296*J^2*\
+\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\[Epsilon]^6 + 497664*J^4*\
+\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\[CapitalGamma]^4*\[Epsilon]^6 + 
+              864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3))])]/2, 
+ (-3*\[CapitalGamma])/4 + Sqrt[-5*J^2 - (3*\[CapitalGamma]^2)/4 - \
+4*\[Epsilon]^2 + (5*J^2 + 3*\[CapitalGamma]^2 + 4*\[Epsilon]^2)/3 + \
+(2^(1/3)*(73*J^4 - 3*J^2*\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 64*\[Epsilon]^4))/
+      (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+         Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+           4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+           864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) + 
+     (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - 234*J^2*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + \
+144*\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+        Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+          4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+          864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3))]/2 + 
+  Sqrt[-5*J^2 + (3*\[CapitalGamma]^2)/2 - 4*\[Epsilon]^2 + (-5*J^2 - 3*\
+\[CapitalGamma]^2 - 4*\[Epsilon]^2)/3 - (2^(1/3)*(73*J^4 - 3*J^2*\
+\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\[CapitalGamma]^2*\[Epsilon]^2 + \
+64*\[Epsilon]^4))/
+      (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+         Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+           4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+           864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) - 
+     (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - 234*J^2*\
+\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + \
+144*\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+        Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+          4618944*J^8*\[Epsilon]^4 - \
+1329696*J^6*\[CapitalGamma]^2*\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\
+\[Epsilon]^4 + 1296*J^2*\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\
+\[Epsilon]^6 + 497664*J^4*\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\
+\[CapitalGamma]^4*\[Epsilon]^6 + 
+          864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3)) + 
+     (-27*\[CapitalGamma]^3 + 12*\[CapitalGamma]*(5*J^2 + 3*\[CapitalGamma]^2 \
++ 4*\[Epsilon]^2) - 8*(9*J^2*\[CapitalGamma] + \[CapitalGamma]^3 + 6*\
+\[CapitalGamma]*\[Epsilon]^2))/
+      (4*Sqrt[-5*J^2 - (3*\[CapitalGamma]^2)/4 - 4*\[Epsilon]^2 + (5*J^2 + 3*\
+\[CapitalGamma]^2 + 4*\[Epsilon]^2)/3 + (2^(1/3)*(73*J^4 - 3*J^2*\
+\[CapitalGamma]^2 - 56*J^2*\[Epsilon]^2 - 6*\[CapitalGamma]^2*\[Epsilon]^2 + \
+64*\[Epsilon]^4))/
+          (3*(-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+             Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+               4618944*J^8*\[Epsilon]^4 - 1329696*J^6*\[CapitalGamma]^2*\
+\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\[Epsilon]^4 + 1296*J^2*\
+\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\[Epsilon]^6 + 497664*J^4*\
+\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\[CapitalGamma]^4*\[Epsilon]^6 + \
+864*
+                \[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)) + 
+         (-1190*J^6 + 90*J^4*\[CapitalGamma]^2 + 2328*J^4*\[Epsilon]^2 - \
+234*J^2*\[CapitalGamma]^2*\[Epsilon]^2 + 1344*J^2*\[Epsilon]^4 + 144*\
+\[CapitalGamma]^2*\[Epsilon]^4 - 1024*\[Epsilon]^6 + 
+            Sqrt[-139968*J^12 - 22356*J^10*\[CapitalGamma]^2 + 216*J^8*\
+\[CapitalGamma]^4 + 108*J^6*\[CapitalGamma]^6 - 1959552*J^10*\[Epsilon]^2 + \
+1065312*J^8*\[CapitalGamma]^2*\[Epsilon]^2 - 67608*J^6*\[CapitalGamma]^4*\
+\[Epsilon]^2 + 648*J^4*\[CapitalGamma]^6*\[Epsilon]^2 - 
+              4618944*J^8*\[Epsilon]^4 - 1329696*J^6*\[CapitalGamma]^2*\
+\[Epsilon]^4 + 66420*J^4*\[CapitalGamma]^4*\[Epsilon]^4 + 1296*J^2*\
+\[CapitalGamma]^6*\[Epsilon]^4 + 15676416*J^6*\[Epsilon]^6 + 497664*J^4*\
+\[CapitalGamma]^2*\[Epsilon]^6 - 70848*J^2*\[CapitalGamma]^4*\[Epsilon]^6 + 
+              864*\[CapitalGamma]^6*\[Epsilon]^6 - 8957952*J^4*\[Epsilon]^8 + \
+497664*J^2*\[CapitalGamma]^2*\[Epsilon]^8 - \
+6912*\[CapitalGamma]^4*\[Epsilon]^8])^(1/3)/(3*2^(1/3))])]/2}\
+\>", "Output",
+ CellChangeTimes->{
+  3.990708099764785*^9, {3.9907093930955133`*^9, 3.9907094046535397`*^9}},
+ CellLabel->
+  "Out[59]//InputForm=",ExpressionUUID->"2b7b356e-0672-43ef-ae0a-\
+e0d50220f058"]
+}, Open  ]]
+},
+WindowSize->{1440, 756.75},
+WindowMargins->{{6, Automatic}, {Automatic, 23.25}},
+FrontEndVersion->"13.3 for Linux x86 (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0d7a9bef-4c6f-4460-a6ca-954bf6f82a9b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4013, 96, 110, "Input",ExpressionUUID->"8e893c02-d800-4f22-9311-52b2b4fd4479"],
+Cell[4596, 120, 3493, 89, 218, "Output",ExpressionUUID->"2f671fbf-fc0b-48e0-8aee-188e52488eaf"]
+}, Open  ]],
+Cell[8104, 212, 395, 8, 31, "Input",ExpressionUUID->"d727bf08-a991-4deb-9e1a-db16dffc2f63"],
+Cell[CellGroupData[{
+Cell[8524, 224, 1386, 29, 130, "Input",ExpressionUUID->"071c87d0-a5a1-47f9-95a3-faa82856ee03"],
+Cell[9913, 255, 1497, 26, 29, "Message",ExpressionUUID->"e27ce9e6-be2b-48ef-a50e-b0cc689e6da4"],
+Cell[11413, 283, 1499, 26, 29, "Message",ExpressionUUID->"69d11303-21c5-4a16-a19c-baa580192eca"],
+Cell[12915, 311, 1497, 26, 29, "Message",ExpressionUUID->"694fcf28-1321-4163-8805-6aea94b3bc77"],
+Cell[14415, 339, 810, 16, 28, "Message",ExpressionUUID->"5e41c18f-ac7f-4517-acd3-40631bc3863e"],
+Cell[15228, 357, 7538, 217, 334, "Output",ExpressionUUID->"de435c24-c276-4059-8d39-cabe1b484bca"]
+}, Open  ]],
+Cell[22781, 577, 152, 3, 29, "Input",ExpressionUUID->"e1a129b8-e533-4069-a9b3-8d7cc7eff43b"],
+Cell[CellGroupData[{
+Cell[22958, 584, 230, 3, 29, "Input",ExpressionUUID->"1b428c6a-c04e-4940-92e7-24a22d541fa5"],
+Cell[23191, 589, 1373, 25, 119, "Output",ExpressionUUID->"5c7125d0-2b5b-4e82-9b37-8d2d6ad1b974"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24601, 619, 874, 24, 31, "Input",ExpressionUUID->"a7c8e9b8-47a4-4a9f-b85f-a21a07b2bcaf"],
+Cell[25478, 645, 1571, 48, 209, "Output",ExpressionUUID->"a0be18bc-4693-41b8-b438-3ce7102e38bf"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27086, 698, 851, 22, 130, "Input",ExpressionUUID->"eb4a0d64-6328-4465-9e6a-a14cd8e9c350"],
+Cell[27940, 722, 1135, 20, 29, "Message",ExpressionUUID->"c7b28e45-5922-4709-939c-424736228c8b"],
+Cell[29078, 744, 1135, 20, 29, "Message",ExpressionUUID->"d2a030b2-7bd0-4948-bd51-56c18a77582c"],
+Cell[30216, 766, 1135, 20, 29, "Message",ExpressionUUID->"ac8da127-2e67-4a58-9f95-f900b4326dd4"],
+Cell[31354, 788, 450, 10, 28, "Message",ExpressionUUID->"fcd7f3c3-d628-4e2e-847a-65cad5ecc63c"],
+Cell[31807, 800, 55641, 1567, 396, "Output",ExpressionUUID->"5c417a8b-1948-457c-9f65-e9dbdecc24fb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[87485, 2372, 230, 3, 29, "Input",ExpressionUUID->"0783b84f-658b-49e7-8859-2aa03f4f9521"],
+Cell[87718, 2377, 10246, 164, 767, "Output",ExpressionUUID->"456ab6ef-b9f6-44ac-b24d-00c147d8cbd5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[98001, 2546, 351, 8, 29, "Input",ExpressionUUID->"b9a13d1a-2822-4563-9835-aa36a0e4ec5c"],
+Cell[98355, 2556, 28587, 451, 2189, "Output",ExpressionUUID->"2b7b356e-0672-43ef-ae0a-e0d50220f058"]
+}, Open  ]]
+}
+]
+*)
+
