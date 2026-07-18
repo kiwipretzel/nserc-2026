@@ -5,7 +5,7 @@ In this repo, I use two types of notebooks for different purposes:
 2) Mathematica notebooks (running on Shemesh) - Numerical computations and (some) analytic computations
 
 Numerical computations from the Mathematica notebooks are stored in .dat files, which I've uploaded to this repo as well. 
-Analytic computations are stored in Python strings to avoid needing to re-run computations. 
+Analytic computations are stored in Python strings to avoid needing to re-run lengthy computations. 
 
 
 
