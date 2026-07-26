@@ -28,6 +28,6 @@ echo "------------------------------------------"
       shift
   done
   eval "\"${exe_dir}/unitary_time_evolution_sim\"" $args
-fi
+
 exit
 
