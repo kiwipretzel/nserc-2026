@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[26]:
+# In[1]:
 
 
 # some installations
@@ -11,6 +11,7 @@ from sympy.physics.quantum import TensorProduct
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
+import matplotlib as mpl
 from matplotlib.colors import LogNorm, Normalize
 from sympy.printing.mathematica import mathematica_code
 from sympy.parsing.mathematica import parse_mathematica
@@ -53,7 +54,7 @@ def L_i_j(i,j, N): # Lindbladian jump operators... Lij = |j><i|
 # In[37]:
 
 
-def lindbladian(N=3, output=False, degenerate=False, H=sp.Matrix([0]), L_operators=[], dissipative=True):
+def lindbladian(N=3, output=False, degenerate=False, H=sp.Matrix([0]), L_operators=[], dissipative=True, damping_rates=[]):
     ''' 
     this function builds the Lindbladian/Louisvillian superoperator in matrix form in the local/site basis
     (row-major convention is used for vectorization of the density matrix)
@@ -65,6 +66,8 @@ def lindbladian(N=3, output=False, degenerate=False, H=sp.Matrix([0]), L_operato
     H - you can specify your own Hamiltonian; if not specified, function builds a completely generic H
     L_operators - you can specify your own Lindbladian jump operators; if not specified, complex generic operators are used
     dissipative - if False, sets rate constants of dissipator to 0 (e.i. the returned matrix then represents unitary time evolution)
+    damping_rates - a list you can provide that specifies the values of the damping rates, the ith element of damping_rates is the 
+                damping rate for the ith element of L_operators; if not specified, completely generic damping_rates's are used
     '''
 
     # unitary time evolution 
@@ -86,13 +89,13 @@ def lindbladian(N=3, output=False, degenerate=False, H=sp.Matrix([0]), L_operato
     else: N = sp.shape(H)[0]
 
     # building our density matrix
-    rho = sp.Matrix(N, N, lambda i, j: sp.Function(f"rho{i}{j}")(t))
+    rho = sp.Matrix(N, N, lambda i, j: sp.Function(f"rho{i}{j}")(t)) if N<=11 else sp.Matrix(N, N, lambda i, j: sp.Function(f"rho_{i},{j}")(t))
 
     # if user wants to see intermediate output, then display H
     if output: H
 
     # computing dissipator only if dissipative is True, otherwise the dissipator is 0
-    D = dissipator(N, L_operators) if dissipative else sp.zeros(N)
+    D = dissipator(N, L_operators, damping_rates) if dissipative else sp.zeros(N)
 
     # if user wants to see intermediate output, then display D
     if output: display(D)
@@ -102,7 +105,7 @@ def lindbladian(N=3, output=False, degenerate=False, H=sp.Matrix([0]), L_operato
 
     # solving for the Lindbladian/Louisvillian superoperator matrix
     eqs = [P[i, j] for i in range(N) for j in range(N)] 
-    rho_vec = [sp.Function(f"rho{i}{j}")(t) for i in range(N) for j in range(N)] # building a vectorized rho (using row-major convention)
+    rho_vec = list(rho.reshape(1, N**2)) # building a vectorized rho (using row-major convention)
     L, _ = sp.linear_eq_to_matrix(eqs, rho_vec)
 
     # reshaping rho_vec into a column vector
@@ -115,7 +118,7 @@ def lindbladian(N=3, output=False, degenerate=False, H=sp.Matrix([0]), L_operato
     return L, rho_vec
 
 
-def dissipator(N, L_operators):
+def dissipator(N, L_operators, damping_rates):
     '''
     this function building the dissipator matrix in the site/local basis
 
@@ -123,6 +126,8 @@ def dissipator(N, L_operators):
     N - number of sites in system
     L_operators - a list of jump operators to use to compute the dissipator.
         If the list is empty, completely generic jump operators are used.
+    damping_rates - a list you can provide that specifies the values of the damping rates, the ith element of damping_rates is the 
+            damping rate for the ith element of L_operators; if not specified, completely generic damping_rates's are used
     '''
 
     # building density matrix
@@ -132,7 +137,19 @@ def dissipator(N, L_operators):
     D = sp.zeros(N,N)
 
     # checking to see if any jump operators were provided
-    if not L_operators:
+    if L_operators:
+
+        # if damping rates were provided, we need to make sure enough were provided
+        if damping_rates and np.shape(L_operators)[0] != np.shape(damping_rates)[0]:
+            print("You did not provide the same number of L_operators and damping_rates's\nReturning a dissipator of 0")
+            return D
+
+        # enough jump operators were provided, so we just use the provided operators
+        for i, operator in enumerate(L_operators):
+            rate_const_gamma = damping_rates[i] if damping_rates else sp.Symbol(f"Gamma_{i}", real=True, nonnegative=True)
+            D += rate_const_gamma*(operator*rho*Dagger(operator) - anti_commutator(Dagger(operator)*operator, rho)*sp.Rational(1,2))
+
+    else:
         # no jump operators were provided, so we use completely generic operators Lij=|j><i| for all i and j
 
         # population transitions: i->j for i not equal j
@@ -147,11 +164,6 @@ def dissipator(N, L_operators):
             rate_const_gamma = sp.Symbol(f"Gamma_{i}→{i}", real=True, nonnegative=True)
             D += rate_const_gamma*(L_i_j(i,i,N)*rho*Dagger(L_i_j(i,i,N)) - anti_commutator(Dagger(L_i_j(i,i,N))*L_i_j(i,i,N), rho)*sp.Rational(1,2))
 
-    else:
-        # jump operators were provided, so we just use the provided operators
-        for i, operator in enumerate(L_operators):
-            rate_const_gamma = sp.Symbol(f"Gamma_{i}", real=True, nonnegative=True)
-            D += rate_const_gamma*(operator*rho*Dagger(operator) - anti_commutator(Dagger(operator)*operator, rho)*sp.Rational(1,2))
 
     # returns the dissipator matrix      
     return D
@@ -213,7 +225,7 @@ def compute_eq_ana(expr, independent_variable, start, stop, delta):
 
 
 
-# In[35]:
+# In[1]:
 
 
 def solve_lindblad_num(L, start, stop, dt, initial_conditions):
@@ -331,4 +343,10 @@ def sigma_minus(i, n):
     sigma_minus = (sigma_x - i sigma_y)/2
     '''
     return (sigma(sigma_x, i, n) - sp.I*sigma(sigma_y, i, n))*sp.Rational(1/2)
+
+
+# In[ ]:
+
+
+
 
